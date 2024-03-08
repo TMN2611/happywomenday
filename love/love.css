@@ -151,7 +151,7 @@ body{
 .listSlider{
     position: relative;
     width: 200px;
-    height: 100px;
+    height: 140px;
     display: flex;
     overflow: hidden;
     border-radius: 10px;
@@ -268,7 +268,7 @@ body{
 }
 .boxCar{
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     transform: translateX(-400px);
     z-index: 2;
     animation: car 4s 1s forwards, car1 2s 5s forwards;
@@ -281,7 +281,7 @@ body{
         transform: translateX(-400px);
     }
     50%,100%{
-        transform: translateX(150px);
+        transform: translateX(330px);
     }
 }
 .boxHeart{
@@ -391,7 +391,7 @@ body{
 .ground-line {
     width: 100%;
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     left: 0;
     overflow: hidden;
     height: 6px;

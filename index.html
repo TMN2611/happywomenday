@@ -4,41 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="./app.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="custom.css" />
+    <title>Question</title>
+    <style>
+
+
+    </style>
   </head>
   <body>
-    <div class="loading">
-      <div class="boxHeartImg">
-        <div class="heartItem item1">
-          <img src="./image/heart.png" alt="" />
-        </div>
-        <div class="heartItem item2">
-          <img src="./image/heart.png" alt="" />
-        </div>
-        <div class="heartItem item3">
-          <img src="./image/heart.png" alt="" />
-        </div>
-      </div>
-      <div class="heartBox">
-        <div class="heart"></div>
-      </div>
-      <div class="progress-bar">
-        <div class="progress"></div>
-        <div class="percent">100%</div>
-      </div>
-      <h2 class="textBox">
-        <span class="textLoad">loading love</span>
-        <span class="cricle1">.</span>
-        <span class="cricle2">.</span>
-        <span class="cricle3">.</span>
-      </h2>
-      <div class="buttonCLick">
-        <img src="./image/cursor.png" alt="" />
-        <div class="button">
-          <p class="textBtn"></p>
+    <article class="l-design-widht">
+      <h1>Answer to continue</h1>
+    
+      <p><mark>Câu hỏi 1:</mark> Trong bài hát "Hẹn ước từ hư vô" của ca sĩ Mỹ Tâm ai là người thấu hiểu nhau ân cần muôn khoảnh khắc ?</p>
+      <p><mark>Câu hỏi 2:</mark>Khoảnh khắc gì đang hiển thị trên màn hình khóa điện thoại của bạn ?</p>
+      <p><mark>Câu hỏi 3:</mark>Thứ gì sẽ tốt hơn nếu ta tập trung vào "đáp án của câu số 2" ?</p>
+      <p style="margin-top:10px"><mark>Gợi ý: Câu trả lời có 10 chữ được ghép từ đáp án của 3 câu hỏi trên. Có 3 cặp từ giống nhau trong câu trả lời</mark></p>
+
+      
+      <div class="card">
+        <h2><svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-coffee" href="#icon-coffee" /></svg>Câu trả lời</h2>
+        <label class="input">
+          <input id='anwsers-input' class="input__field" type="text" placeholder=" " />
+          <span class="input__label">Vui lòng viết hoa toàn bộ</span>
+        </label>
+        <div class="button-group">
+          <button id='submit-btn'>Send</button>
+          <button type="reset">Reset</button>
         </div>
       </div>
-    </div>
+    </article>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="icon-coffee" viewBox="0 0 20 20">
+        <title>icon-coffee</title>
+        <path fill="currentColor" d="M15,17H14V9h3a3,3,0,0,1,3,3h0A5,5,0,0,1,15,17Zm1-6v3.83A3,3,0,0,0,18,12a1,1,0,0,0-1-1Z"/>
+        <rect fill="currentColor" x="1" y="7" width="15" height="12" rx="3" ry="3"/>
+        <path fill="var(--color-accent)" d="M7.07,5.42a5.45,5.45,0,0,1,0-4.85,1,1,0,0,1,1.79.89,3.44,3.44,0,0,0,0,3.06,1,1,0,0,1-1.79.89Z"/>
+        <path fill="var(--color-accent)" d="M3.07,5.42a5.45,5.45,0,0,1,0-4.85,1,1,0,0,1,1.79.89,3.44,3.44,0,0,0,0,3.06,1,1,0,1,1-1.79.89Z"/>
+        <path fill="var(--color-accent)" d="M11.07,5.42a5.45,5.45,0,0,1,0-4.85,1,1,0,0,1,1.79.89,3.44,3.44,0,0,0,0,3.06,1,1,0,1,1-1.79.89Z"/>
+      </symbol>
+    </svg>
   </body>
+  <script>
+      const anwsersInputElement = document.querySelector('#anwsers-input');
+      const submitBtnElement = document.querySelector('#submit-btn');
+      const anwserCorrect = "CHÚNG TA CỦA HIỆN TẠI CHÚNG TA CỦA TƯƠNG LAI";
+
+      submitBtnElement.addEventListener('click', function() {
+          console.log(anwsersInputElement.value)
+          if(anwsersInputElement.value.trim()===anwserCorrect.trim()) {
+            console.log(true)
+            alert("ĐÚNG RỒI !!!!! QUÁ XUẤT SẮC");
+            window.location.href = "/loadpage.html";
+
+          }
+          else {
+            alert("SAI RÙI ! Phương dỡ ẹc . LÊU LÊU :v");
+          }
+      })
+      
+  </script>
 </html>
